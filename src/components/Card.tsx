@@ -1,5 +1,4 @@
-import React from 'react';
-import '../style/porfolio.css'
+import React, { ReactNode } from 'react';
 
 // Define the props type for the Card
 interface CardProps {
@@ -7,7 +6,7 @@ interface CardProps {
     description: string;
     image: string;
     projectLink: string;
-    technologies: string[];
+    technologies: ReactNode[]; // Change this to accept JSX elements
 }
 
 const Card: React.FC<CardProps> = ({ title, description, image, projectLink, technologies }) => {
@@ -16,15 +15,11 @@ const Card: React.FC<CardProps> = ({ title, description, image, projectLink, tec
             <img src={image} alt={title} className="card-image" />
             <div className="card-content">
                 <h3>{title}</h3>
-                <p className='disc'>{description}</p>
-                <div className='infos'>
-                    <div className="card-technologies">
-                        <ul>
-                            {technologies.map((tech, index) => (
-                                <li key={index}>{tech}</li>
-                            ))}
-                        </ul>
-                    </div>
+                <p>{description}</p>
+                <div className="technologies">
+                    {technologies.map((TechIcon, index) => (
+                        <span key={index}>{TechIcon}</span>
+                    ))}
                     <a href={projectLink} target="_blank" rel="noopener noreferrer">
                         View Project
                     </a>

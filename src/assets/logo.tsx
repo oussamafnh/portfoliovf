@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/Navbarx.css";
 export const LightLogo = () => (
     // <svg className="logoImage" width="169" height="60 " viewBox="0 0 639 131" fill="none" xmlns="http://www.w3.org/2000/svg">
