@@ -19,10 +19,10 @@ const Portfolio: React.FC = () => {
       technologies: [<Php />, <Laravel />, <Css />],
     },
     {
-      title: 'Project Two',
-      description: 'A description of project two.',
-      image: 'https://via.placeholder.com/300',
-      projectLink: 'https://project-two-link.com',
+      title: 'LOOPIFYX',
+      description: 'A web application that provides JavaScript code patterns for creating various star patterns',
+      image: 'https://private-user-images.githubusercontent.com/96582842/367901696-d9a926cc-a01f-442c-8270-1abd3b9d7828.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY1MTQ3MjUsIm5iZiI6MTcyNjUxNDQyNSwicGF0aCI6Ii85NjU4Mjg0Mi8zNjc5MDE2OTYtZDlhOTI2Y2MtYTAxZi00NDJjLTgyNzAtMWFiZDNiOWQ3ODI4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTE2VDE5MjAyNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAxNmQxNjJlYTExYmU3NmU1NDkxMjBmOWNjZTg0N2ZmOGU0M2MxNmY5MzQ3NGQ5ZTIwZTliYjU1MWFmODc5YWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.XTKfKfYSXJ2D02XHKCtEv1TAui09dFGMycVgAUvYEOA',
+      projectLink: 'https://github.com/oussamafnh/Loopifyx',
       technologies: [<Node />, <Js />, <Reactjs />],
     }
   ];
