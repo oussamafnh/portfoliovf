@@ -6,6 +6,8 @@ import Reactjs from '../assets/svgs/languages/react';
 import Php from '../assets/svgs/languages/php';
 import Laravel from '../assets/svgs/languages/laravel';
 import Css from '../assets/svgs/languages/css';
+import '../style/porfolio.css';
+
 
 const Portfolio: React.FC = () => {
   const projects = [

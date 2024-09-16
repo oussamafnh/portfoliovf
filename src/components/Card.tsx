@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import '../style/porfolio.css';
 
 // Define the props type for the Card
 interface CardProps {
