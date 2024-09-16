@@ -27,6 +27,7 @@
 }
 
 .card-content h3 {
+    padding-top: 2vh;
     margin: 0 0 10px;
     font-size: 4vh;
     color: var(--c4);
