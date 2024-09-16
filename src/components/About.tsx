@@ -13,13 +13,12 @@ import Laravel from "../assets/svgs/languages/laravel";
 
 const About = () => {
 
-    const scrollToSection = (id) => {
+    const scrollToSection = (id: string) => {
         const section = document.querySelector(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
-
 
     return (
         <div className="aboutdiv" id='about' >

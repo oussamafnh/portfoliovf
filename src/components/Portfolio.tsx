@@ -38,7 +38,7 @@ const Portfolio: React.FC = () => {
             description={project.description}
             image={project.image}
             projectLink={project.projectLink}
-            technologies={project.technologies} // Pass the technologies prop
+            technologies={project.technologies}
           />
         ))}
       </div>

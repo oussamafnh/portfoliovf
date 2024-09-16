@@ -1,4 +1,3 @@
-import React from 'react'
 import '../style/Navbarx.css'
 import { LightLogo } from "../assets/logo";
 
