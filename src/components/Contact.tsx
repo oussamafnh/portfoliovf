@@ -93,7 +93,7 @@ const Contact = () => {
                     <ul className="GitHub">
                         <li className="icon-content">
                             <a
-                                href="https://www.GitHub.com/in/oussama-fannah-731516201"
+                                href="https://github.com/oussamafnh"
                                 aria-label="GitHub"
                                 data-social="GitHub"
                                 target="_blank"
