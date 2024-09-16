@@ -49,7 +49,7 @@ const About = () => {
                     <div className="buttons">
                         <button
                             className="noselect noselect1"
-                            onClick={() => window.open('../assets/CV_oussama_Fannah.pdf', '_blank')}
+                            onClick={() => window.open('https://drive.google.com/file/d/10c5IuzQN6MNFgv9pNoOEipe7NUsqW3Yx/view?usp=drive_link', '_blank')}
                         >
                             <span className="text">Download My Resume</span>
                             <span className="icon">
