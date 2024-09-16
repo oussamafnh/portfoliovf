@@ -1,0 +1,133 @@
+.card {
+    border: 1px solid var(--bg);
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; /* Only animate the box-shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+/* Hover effect */
+.card:hover {
+    box-shadow: 0 8px 16px var(--c5);
+    /* Darker and larger shadow */
+}
+
+/* Card image styling */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 4vh;
+    color: var(--c4);
+}
+
+.card-content p {
+    color: var(--c3);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.card-content .disc {
+    padding-bottom: 6vh;
+}
+
+
+
+.card svg{
+    height: 3vh;
+    width: auto;
+    margin-bottom: 2vh;
+    margin-right: 1vw;
+    transition: all 0.3s ease;
+}
+
+
+.card .infos{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+.card .infos .card-technologies{
+    left: 0;
+}
+.card .infos .card-technologies ul {
+    padding-left: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-content a {
+    position: absolute;
+    right: 10%;
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio {
+    width: 100vw;
+    min-height: 100vh;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 10vh; */
+    background-color: var(--bg);
+    position: relative;
+}
+.portfolio .title {
+    height: 10vh;
+    width: 88%;
+    margin-top: 8vh;
+    margin-left: 6%;
+}
+
+.portfolio .title p {
+    color: var(--c4);
+    font-size: 5vh;
+}
+
+
+
+.portfolio .cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+
+@media (max-width: 768px) {
+    .portfolio {
+        width: 100vw;
+        height: auto !important;
+    }
+}

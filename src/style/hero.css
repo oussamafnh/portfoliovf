@@ -1,0 +1,46 @@
+/* General styling for the Hero component */
+.hero-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+/* Styling for the name */
+.hero h1 {
+    font-size: 9vh;
+    font-weight: bold;
+    color: black;
+    display: flex;
+}
+
+.hero .highlight {
+    background-color: var(--c4);
+    color: var(--bg);
+    padding: 0 10px;
+    text-align: left;
+}
+
+/* Subtitle */
+.hero h2 {
+    font-size: 2.95vh;
+    font-weight: 700;
+    color: var(--c3);
+    margin-top: 10px;
+    text-transform: uppercase;
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4vh;
+    }
+
+    .hero h2 {
+        font-size: 2.17vh;
+        font-weight: 800;
+        max-width: 100%; /* Ensure it doesn't overflow the container */
+    }
+}
