@@ -1,4 +1,3 @@
-import React from "react";
 export const Herosvg = () => (
     <svg width="1920" height="1080" className="svghero" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M376 543.4L367.15 547L352.6 532.6L343.45 539.8L340 537.85V520.15L343.45 518.35L352.6 525.55L367.15 511L376 514.6V543.4ZM357.55 529L367 536.5V521.5L357.55 529ZM343.45 534.55L349 529L343.6 523.45L343.45 534.55Z" fill="#1E90FF" />

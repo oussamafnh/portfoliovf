@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import '../style/hero.css';
-import { Herosvg } from "../assets/svg.jsx"
+import { Herosvg } from "../assets/svg"
 
 const Hero = () => {
     const h1Ref = useRef(null);
