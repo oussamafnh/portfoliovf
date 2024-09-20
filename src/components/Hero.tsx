@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import '../style/hero.css';
+import { Herosvg } from "../assets/svg.jsx"
 
 const Hero = () => {
     const h1Ref = useRef(null);
@@ -23,6 +24,7 @@ const Hero = () => {
 
                 <h2 ref={h2Ref}>Junior Full Stack Developer</h2>
             </div>
+            <Herosvg />
         </div>
     );
 };
