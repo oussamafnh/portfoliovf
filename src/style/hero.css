@@ -8,9 +8,9 @@
     background-color: var(--bg);
 }
 
-.hero {
+/* .hero {
     padding-left: 5vw;
-}
+} */
 
 /* Styling for the name */
 .hero h1 {
@@ -29,15 +29,13 @@
 }
 
 /* Subtitle */
-.hero h2 {
-    font-size: 2.95vh;
+/* .hero .subtext {
     font-weight: 700;
     color: var(--c3);
     margin-top: 10px;
     text-transform: uppercase;
     transition: width 0.3s ease;
-    /* Smooth transition for width change */
-}
+} */
 
 
 .animation {
@@ -45,19 +43,15 @@
     overflow: hidden;
 }
 
-.animation>div>div {
+.animation div .subtext {
     color: var(--c3);
     font-size: 25px;
-    padding: 0.25rem 0.75rem;
+    padding: 5px 5px;
     height: 20px;
-    margin-bottom: 2.81rem;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
-/* 
-.animation>div>div p{
-    font-size: 25vh; 
-} */
 
 .animation div:first-child {
     animation: text-animation 6s infinite;
@@ -146,20 +140,94 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .hero-div {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--bg);
+    }
     .hero h1 {
-        font-size: 4vh;
+        font-size: 10vw;
     }
 
     .hero h2 {
-        font-size: 2.17vh;
+        font-size: 2.2vh;
         font-weight: 800;
         max-width: 100%;
-        /* Ensure it doesn't overflow the container */
     }
 
     .svghero {
         display: none;
     }
+
+
+
+
+    .animation {
+        height: 35px;
+        overflow: hidden;
+    }
+    
+    .animation div .subtext {
+        color: var(--c3);
+        font-size: 17.5px;
+        padding: 12px 2px;
+        height: 10px;
+        margin-bottom: 28px;
+        display: inline-block;
+    }
+    
+    
+    .animation div:first-child {
+        animation: text-animation 6s infinite;
+    }
+
+
+    @keyframes text-animation {
+        0% {
+            margin-top: 0;
+        }
+    
+        10% {
+            margin-top: 0;
+        }
+    
+        20% {
+            margin-top: -40px;
+        }
+    
+        30% {
+            margin-top: -40px;
+        }
+    
+        40% {
+            margin-top: -90px;
+        }
+    
+        60% {
+            margin-top: -90px;
+        }
+    
+        70% {
+            margin-top: -40px;
+        }
+    
+        80% {
+            margin-top: -40px;
+        }
+    
+        90% {
+            margin-top: 0;
+        }
+    
+        100% {
+            margin-top: 0;
+        }
+    }
+    
+    
 }
 
 @media (min-width: 768px) {
