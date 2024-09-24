@@ -6,9 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
 
-
-    const isMobile = window.innerWidth < 768;
-
     const ref = useRef(null);
 
     const { scrollYProgress } = useScroll({
