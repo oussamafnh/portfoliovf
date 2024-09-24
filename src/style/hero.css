@@ -167,22 +167,23 @@
     fill-opacity: 1;
 
     transform-origin: center;
-    animation: draw 5s ease-in-out ;
+    animation: draw 2
+    s ease-in-out ;
 }
 
 
 @keyframes draw {
     0% {
-        stroke-dasharray: 0, 1000;
-        fill-opacity: 0.2;
+        /* stroke-dasharray: 0, 1000;
         stroke-opacity: 1;
-        stroke: var(--c3);
+        stroke: var(--c3); */
+        fill-opacity: 0.2;
     }
 
     100% {
-        stroke-dasharray: 1000, 0;
+        /* stroke-dasharray: 1000, 0;
+        stroke-opacity: 0; */
         fill-opacity: 1;
-        stroke-opacity: 0;
     }
 }
 

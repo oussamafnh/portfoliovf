@@ -254,7 +254,6 @@
 
 .popup input:not(:checked)+.circle {
     animation: outscalecircle 0.5s forwards;
-    /* animation: icircle 0.5s forwards; */
 }
 
 
@@ -354,15 +353,6 @@
     }
 }
 
-@keyframes icircle {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
 
 @keyframes fadeIn {
     from {
