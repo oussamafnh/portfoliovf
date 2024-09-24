@@ -1,4 +1,11 @@
-.aboutdiv{
+.aboutabout {
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.aboutdiv {
     height: 100vh;
     width: 100vw;
     background-color: var(--bg);
@@ -6,7 +13,7 @@
     flex-direction: column;
 }
 
-.aboutdiv .sec-title {  
+.aboutdiv .sec-title {
     height: auto;
     width: 88%;
     margin-top: 8vh;
@@ -39,8 +46,9 @@
     margin-top: 2vw;
     position: relative;
     transition: opacity 0.5s ease-in-out;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);  
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
     /* Ensure smooth transition of the profile image when fading out */
 }
 
@@ -67,6 +75,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -74,7 +83,7 @@
 
 
 
-.rightside{
+.rightside {
     right: 5vw;
     width: 80%;
     margin-left: 5vw;
@@ -84,20 +93,23 @@
     overflow: hidden;
 }
 
-.rightside p{
+.rightside p {
     color: var(--c2);
 }
-.rightside .stline{
+
+.rightside .stline {
     margin-top: 1vh;
 }
-.rightside .ndline{
+
+.rightside .ndline {
     margin-top: 2vh;
 }
-.rightside p span{
+
+.rightside p span {
     color: var(--c4);
 }
 
-.rightside .title{
+.rightside .title {
     margin-top: 4vh;
     font-size: 2.5vh;
     color: var(--c4);
@@ -106,8 +118,8 @@
 }
 
 
-.rightside svg{
-    height:3vh;
+.rightside svg {
+    height: 3vh;
     width: auto;
 }
 
@@ -144,26 +156,34 @@
     border: none;
     border: var(--c4) 2px solid;
 }
+
 .rightside .buttons .noselect1 {
     width: 51vh;
 }
+
 .rightside .buttons .noselect2 {
     width: 33vh;
 }
-.rightside .buttons button,.rightside .buttons button span {
+
+.rightside .buttons button,
+.rightside .buttons button span {
     transition: 200ms;
 }
+
 .rightside .buttons button .text {
     color: var(--bg);
     font-weight: bold;
     font-size: 2.3vh;
 }
+
 .rightside .buttons .noselect1 .text {
     width: 33vh;
 }
+
 .rightside .buttons .noselect2 .text {
     width: 20vh;
 }
+
 .rightside .buttons button .icon {
     position: static;
     /* border-left: 1px solid #040D12; */
@@ -173,10 +193,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .rightside .buttons button svg {
     width: 2.3vh;
     fill: var(--bg);
 }
+
 .rightside .buttons button:hover svg path {
     fill: var(--c2);
 }
@@ -184,24 +206,30 @@
 .rightside .buttons button:hover {
     background: var(--bg);
 }
+
 .rightside .buttons button:hover .text {
     color: transparent;
 }
+
 .rightside .buttons button:hover .icon {
     width: 150px;
 }
+
 .rightside .buttons .noselect1:hover .icon {
     /* transform: translateX(-100.5px); */
     margin-right: 36%;
 }
+
 .rightside .buttons .noselect2:hover .icon {
     /* transform: translateX(-60.5px); */
     margin-right: 32%;
 
 }
+
 .rightside .buttons button:focus {
     outline: none;
 }
+
 .rightside .buttons button:active .icon svg {
     transform: scale(0.8);
 }
@@ -212,16 +240,17 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .aboutdiv{
+    .aboutdiv {
         height: auto;
         flex-direction: column;
     }
-    
+
     .about {
         display: flex;
         flex-direction: column;
         height: auto;
     }
+
     .leftside {
         width: 80%;
         margin-left: 10%;
@@ -230,7 +259,7 @@
 
 
 
-    .rightside{
+    .rightside {
         margin-left: 10vw;
         right: 0;
         width: 80%;
@@ -247,10 +276,10 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 10px;
-    
+
     }
 
-    
+
     .rightside .buttons {
         margin-top: -5vh;
         display: flex;
@@ -288,11 +317,11 @@
         /* transform: translateX(-100.5px); */
         margin-right: 38%;
     }
-    
+
     .rightside .buttons .noselect2:hover .icon {
         /* transform: translateX(-60.5px); */
         margin-right: 32%;
-    
+
     }
 
 }

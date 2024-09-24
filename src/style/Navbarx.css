@@ -23,7 +23,7 @@
     position: absolute;
     z-index: 1002;
     margin-top: 1.5vh;
-    height: 7vh;
+    height: 6vh;
 }
 
 @media only screen and (max-width: 600px) {

@@ -7,7 +7,8 @@
     height: 100vh;
     background-color: var(--bg);
 }
-.hero{
+
+.hero {
     padding-left: 5vw;
 }
 
@@ -15,7 +16,7 @@
 .hero h1 {
     font-size: 9vh;
     font-weight: bold;
-    color: black;
+    color: var(--c4);
     display: flex;
 }
 
@@ -39,80 +40,6 @@
 }
 
 
-/* 
-.textanimation {
-    font-weight: 500;
-    font-size: 25px;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 40px;
-    padding: 10px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-radius: 8px;
-}
-
-.phrases {
-    overflow: hidden;
-    position: relative;
-}
-
-.phrases::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(var(--bg-color) 10%,
-            transparent 30%,
-            transparent 70%,
-            var(--bg-color) 90%);
-    z-index: 20;
-}
-
-.phrase {
-    display: block;
-    height: 100%;
-    padding-left: 6px;
-    color: var(--c3);
-    animation: spin_4991 3s infinite;
-}
-
-@keyframes spin_4991 {
-    16% {
-        -webkit-transform: translateY(-102%);
-        transform: translateY(-102%);
-    }
-
-    33% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-
-    50% {
-        -webkit-transform: translateY(-202%);
-        transform: translateY(-202%);
-    }
-
-    66% {
-        -webkit-transform: translateY(-200%);
-        transform: translateY(-200%);
-    }
-
-    82% {
-        -webkit-transform: translateY(-302%);
-        transform: translateY(-302%);
-    }
-
-    100% {
-        -webkit-transform: translateY(-300%);
-        transform: translateY(-300%);
-    }
-
-} */
-
-
-
-
 .animation {
     height: 50px;
     overflow: hidden;
@@ -122,10 +49,11 @@
     color: var(--c3);
     font-size: 25px;
     padding: 0.25rem 0.75rem;
-    height:20px;
+    height: 20px;
     margin-bottom: 2.81rem;
     display: inline-block;
 }
+
 /* 
 .animation>div>div p{
     font-size: 25vh; 
@@ -137,16 +65,45 @@
 
 
 @keyframes text-animation {
-    0% {margin-top: 0;}
-    10% {margin-top: 0;}
-    20% {margin-top: -40px;}
-    30% {margin-top: -40px;}
-    40% {margin-top: -100px;}
-    60% {margin-top: -100px;}
-    70% {margin-top: -40px;}
-    80% {margin-top: -40px;}
-    90% {margin-top: 0;}
-    100% {margin-top: 0;}
+    0% {
+        margin-top: 0;
+    }
+
+    10% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: -40px;
+    }
+
+    30% {
+        margin-top: -40px;
+    }
+
+    40% {
+        margin-top: -100px;
+    }
+
+    60% {
+        margin-top: -100px;
+    }
+
+    70% {
+        margin-top: -40px;
+    }
+
+    80% {
+        margin-top: -40px;
+    }
+
+    90% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
 }
 
 
@@ -165,24 +122,23 @@
 .svghero path {
     stroke-width: 0.5;
     fill-opacity: 1;
-
+    stroke: var(--bg2);
     transform-origin: center;
-    animation: draw 2
-    s ease-in-out ;
+    animation: draw 2 s ease-in-out;
 }
 
 
 @keyframes draw {
     0% {
-        /* stroke-dasharray: 0, 1000;
+        stroke-dasharray: 0, 1000;
         stroke-opacity: 1;
-        stroke: var(--c3); */
+        stroke: var(--c3);
         fill-opacity: 0.2;
     }
 
     100% {
-        /* stroke-dasharray: 1000, 0;
-        stroke-opacity: 0; */
+        stroke-dasharray: 1000, 0;
+        stroke-opacity: 0;
         fill-opacity: 1;
     }
 }
@@ -203,5 +159,21 @@
 
     .svghero {
         display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-div {
+        width: 100vw;
+        display: flex;
+        /* justify-content: center; */
+        align-items: start;
+        height: 100vh;
+        background-color: var(--bg);
+    }
+    
+    .hero {
+        padding-left: 5vw;
+        padding-top: 30vh;
     }
 }
