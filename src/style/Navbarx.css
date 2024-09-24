@@ -378,6 +378,14 @@
     .mobile-menu {
         display: block;
     }
+    .lagswimobile {
+        height: 30vh;
+        font-size: 3.5vh;
+    }
+    .lagswimobile button{
+        margin-top: 20vh;
+        font-size: 3.5vh;
+    }
 
 }
 

@@ -5,7 +5,7 @@
 
 .language-switcher button{
     color: var(--c2);
-    background-color: var(--bg);
+    background-color: transparent;
     border: 0px;
     border-radius: 5px;
     padding: 2px 5px;
