@@ -149,6 +149,7 @@
 
 
 .circle {
+    transform: scale(1);
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -253,6 +254,7 @@
 
 .popup input:not(:checked)+.circle {
     animation: outscalecircle 0.5s forwards;
+    /* animation: icircle 0.5s forwards; */
 }
 
 
@@ -345,6 +347,16 @@
 @keyframes outscalecircle {
     from {
         transform: scale(50);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes icircle {
+    from {
+        transform: scale(1);
     }
 
     to {

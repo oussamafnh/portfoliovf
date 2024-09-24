@@ -1,15 +1,25 @@
-
 :root {
   --bg: #ffffff;
+  --bg2:#f7f7f7;
   --c1: #D9D9D9;
-  --c3: #51515170;
+  --c3: #00000070;
   --c2: #000000;
-  --c4: #1E90FF;
-  --c5: #1e8fff45;
+  --c4: #192965;
+  --c5: #19296583;
   --c6: #5eaeff;
 }
 
-*{
+/* :root {
+  --bg: #efd6ac;
+  --c1: #D9D9D9;
+  --c3: #c44900;
+  --c2: #04151f;
+  --c4: #2f3e46;
+  --c5: #354f52;
+  --c6: #352F44;
+} */
+
+* {
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   width: auto;
   height: auto;
@@ -21,9 +31,9 @@
   font-weight: 700;
   font-style: normal;
   scroll-behavior: smooth;
-}  
+}
 
-.mainapp{
+.mainapp {
   width: 100vw;
   height: 100vh;
   margin-top: 0%;

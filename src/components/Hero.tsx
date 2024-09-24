@@ -20,10 +20,13 @@ const Hero = () => {
                 <h1 ref={h1Ref}>
                     <span className="highlight">OUSSAMA</span> FANNAH
                 </h1>
-                {/* <p>Coding with Passion   ,   Building with Precision</p> */}
-
-                <h2 ref={h2Ref}>Junior Full Stack Developer</h2>
+                <section className="animation">
+                    <div className="first"><div>Junior Full Stack Developer</div></div>
+                    <div className="second"><div>Coding with Passion</div></div>
+                    <div className="third"><div>Building with Precision</div></div>
+                </section>
             </div>
+            
             <Herosvg />
         </div>
     );
