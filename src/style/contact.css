@@ -375,7 +375,7 @@ ul {
 
     .sec3 .content .leftside .form-container .form-submit-btn {
         width: 97.5%;
-        padding: 2vh 2vw;
+        padding: vh 2vw;
         color: var(--bg);
         font-weight: 600;
         background: #313131;

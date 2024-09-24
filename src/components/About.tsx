@@ -77,7 +77,6 @@ const About = () => {
                         <div className="buttons">
                             <button
                                 className="noselect noselect1"
-                                // onClick={() => window.open('https://drive.google.com/file/d/10c5IuzQN6MNFgv9pNoOEipe7NUsqW3Yx/view?usp=drive_link', '_blank')}
                                 onClick={() => {i18n.language === 'fr' ? window.open('https://drive.google.com/file/d/1HIZ98ang-7QzjtR9YpCPfJjC4XnlSfR5/view?usp=drive_link', '_blank') : window.open('https://drive.google.com/file/d/1vrkEPD6LPOB3Un3f5eE0tb1KHrwKvIwR/view?usp=drive_link', '_blank')}}
 
 >

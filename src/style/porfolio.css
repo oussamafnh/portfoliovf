@@ -145,4 +145,10 @@
         width: 100vw;
         height: auto !important;
     }
+    .portfolio .title {
+        height: 10vh;
+        width: 88%;
+        margin-top: 10px;
+        margin-left: 6%;
+    }
 }

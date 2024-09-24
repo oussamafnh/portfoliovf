@@ -141,6 +141,7 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 10px;
+    margin-bottom: 2vh;
 
 }
 
@@ -246,7 +247,7 @@
     .leftside {
         width: 80%;
         margin-left: 10%;
-        height: 100%;
+        height: auto;
     }
 
 
