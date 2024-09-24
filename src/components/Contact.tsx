@@ -1,8 +1,11 @@
 import  { useState } from "react";
 import { useForm } from '@formspree/react';
 import '../style/contact.css';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+
+    const { t } = useTranslation();
     const [,handleSubmit] = useForm('mrgwbejg');
     const [isSuccess, setIsSuccess] = useState(false);
 
@@ -19,7 +22,7 @@ const Contact = () => {
         <>
             <div className="sec3" id="contact">
                 <div className="title">
-                    <p>Let's work together</p>
+                    <p>{t('contact.bigtitle')}</p>
                 </div>
                 <div className="content">
                     <div className="leftside">
@@ -27,7 +30,7 @@ const Contact = () => {
 
                             <div className="form">
                                 <div className="form-group">
-                                    <label htmlFor="name">Name</label>
+                                    <label htmlFor="name">{t('contact.name')}</label>
                                     <input
                                         required
                                         name="name"
@@ -36,7 +39,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="email">Email</label>
+                                    <label htmlFor="email">{t('contact.email')}</label>
                                     <input
                                         required
                                         name="email"
@@ -45,7 +48,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="message">Leave A Message</label>
+                                    <label htmlFor="message">{t('contact.message')}</label>
                                     <textarea
                                         required
                                         cols={50}
@@ -56,14 +59,14 @@ const Contact = () => {
                                 </div>
                                 {isSuccess ? (
                                     <div className="succeededmsg">
-                                        <p>Your message has been received. Have a great day!</p>
+                                        <p>{t('contact.messagesuccess')}</p>
                                     </div>
                                 ) : (
                                     <button
                                         type="submit"
                                         className="form-submit-btn"
                                     >
-                                        Send
+                                        {t('contact.submit')}
                                     </button>
                                 )}
                             </div>
@@ -79,7 +82,7 @@ const Contact = () => {
 
                         <div className="social">
 
-                            <p>Connect with me on social platforms!</p>
+                            <p>{t('contact.social')}</p>
 
                         </div>
 

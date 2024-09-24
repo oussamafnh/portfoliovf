@@ -1,0 +1,41 @@
+{
+    "navbar": {
+        "home": "Accueil",
+        "about": "Présentation",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "languageSwitcher": {
+            "en": "Anglais",
+            "fr": "Français"
+        }
+    },
+    "hero": {
+        "developer": "Junior Développeur Full Stack ",
+        "passion": "Coder avec passion",
+        "precision": "Construire avec précision"
+    },
+    "about": {
+        "bigtitle":"Présentation",
+        "title": "À propos de moi :",
+        "intro": "Salut, je suis <span> Oussama Fannah </span>, un développeur Full Stack avec un Bac+2 en développement web. Je suis passionné par la technologie et compétent en JavaScript, React, Node.js, et plus encore.",
+        "secondLine": "Avec une solide fondation et une soif d'apprendre en continu, je suis prêt à relever de nouveaux défis et à contribuer à des projets innovants dans l'industrie technologique.",
+        "skillsTitle": "Compétences :",
+        "resume": "Télécharger mon CV",
+        "contact":"contactez-moi"
+    },
+    "portfolio":{
+        "bigtitle":"Portfolio",
+        "link":"Voir le projet"
+    },
+    "contact": {
+        "bigtitle": "Collaborons ensemble",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Votre Message",
+        "messagesuccess" : "Votre message a été reçu. Passez une excellente journée !",
+        "submit": "Envoyer",
+        "social":"Connectez-vous avec moi sur les réseaux sociaux !"
+
+    }
+    
+}

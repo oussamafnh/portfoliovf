@@ -1,8 +1,13 @@
 import '../style/Navbarx.css'
 import { LightLogo } from "../assets/logo";
 import { motion } from 'framer-motion';
+import LanguageSwitcher from './Languageswitcher';
+import { useTranslation } from 'react-i18next';
 
 const Navbarx = () => {
+
+    const { t } = useTranslation();
+
 
     const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
         event.preventDefault();
@@ -43,16 +48,27 @@ const Navbarx = () => {
                 >
                     <ul>
                         <li>
-                            <a href="#home" onClick={(e) => handleScroll(e, '#home')}>Home</a>
+                            <a href="#home" onClick={(e) => handleScroll(e, '#home')}>
+                                {t('navbar.home')}
+                            </a>
                         </li>
                         <li>
-                            <a href="#about" onClick={(e) => handleScroll(e, '#about')}>About</a>
+                            <a href="#about" onClick={(e) => handleScroll(e, '#about')}>
+                                {t('navbar.about')}
+                            </a>
                         </li>
                         <li>
-                            <a href="#portfolio" onClick={(e) => handleScroll(e, '#portfolio')}>Portfolio</a>
+                            <a href="#portfolio" onClick={(e) => handleScroll(e, '#portfolio')}>
+                                {t('navbar.portfolio')}
+                            </a>
                         </li>
                         <li>
-                            <a href="#contact" onClick={(e) => handleScroll(e, '#contact')}>Contact</a>
+                            <a href="#contact" onClick={(e) => handleScroll(e, '#contact')}>
+                                {t('navbar.contact')}
+                            </a>
+                        </li>
+                        <li>
+                            <LanguageSwitcher />
                         </li>
                     </ul>
                 </motion.div>

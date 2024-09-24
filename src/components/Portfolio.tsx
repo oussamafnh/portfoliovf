@@ -1,66 +1,3 @@
-// import React from 'react';
-// import Card from './Card';
-// import Node from '../assets/svgs/languages/node';
-// import Js from '../assets/svgs/languages/js';
-// import Reactjs from '../assets/svgs/languages/react';
-// import Php from '../assets/svgs/languages/php';
-// import Laravel from '../assets/svgs/languages/laravel';
-// import '../style/porfolio.css';
-
-
-// const Portfolio: React.FC = () => {
-//   const projects = [
-//     {
-//       title: 'E-BookOasis',
-//       description: 'an online platform for exploring and sharing eBooks.',
-//       image: 'https://camo.githubusercontent.com/64f72ab9c647e00a2852e633c5051e95faa8d39127d16b23e81e2533f4e24eac/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6471376b6a647338732f696d6167652f75706c6f61642f76313639393338313534312f7339386f747636656c6e686d706f74306a68656c2e6a7067',
-//       projectLink: 'https://github.com/oussamafnh/Ebookoasis?tab=readme-ov-file',
-//       technologies: [<Php />, <Laravel />],
-//     },
-//     {
-//       title: 'LOOPIFYX',
-//       description: 'A web application that provides JavaScript code patterns for creating various star patterns',
-//       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121647/cfruk7fmjzwbgrf2zks0.png',
-//       projectLink: 'https://github.com/oussamafnh/Loopifyx',
-//       technologies: [<Node />, <Js />, <Reactjs /> ],
-//     },
-//     {
-//       title: 'FannahTechStore',
-//       description: 'A web application designed to facilitate the sale of electronic products online. ',
-//       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121033/xvqvtrgpwh3vhyvwz18r.png',
-//       projectLink: 'https://github.com/oussamafnh/fannahtechstore',
-//       technologies: [<Php />, <Laravel />, <Js />],
-//     }
-//   ];
-
-//   return (
-//     <div className="portfolio" id='portfolio'>
-//       <div className="title">
-//         <p>Portfolio </p>
-//       </div>
-//       <div className="cards">
-//         {projects.map((project, index) => (
-//           <Card
-//             key={index}
-//             title={project.title}
-//             description={project.description}
-//             image={project.image}
-//             projectLink={project.projectLink}
-//             technologies={project.technologies}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Portfolio;
-
-
-
-
-
-
 import React, { useRef, useEffect, useState } from 'react';
 import Card from './Card';
 import Node from '../assets/svgs/languages/node';
@@ -70,8 +7,14 @@ import Php from '../assets/svgs/languages/php';
 import Laravel from '../assets/svgs/languages/laravel';
 import { motion, useScroll, useTransform } from "framer-motion";
 import '../style//porfolio.css';
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 
 const Portfolio: React.FC = () => {
+
+  const { t } = useTranslation();
+
+
   const portfolioRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -87,21 +30,30 @@ const Portfolio: React.FC = () => {
   const projects = [
     {
       title: 'E-BookOasis',
-      description: 'An online platform for exploring and sharing eBooks.',
+      descriptions: {
+        en: 'An online platform for exploring and sharing eBooks.',
+        fr: 'Une plateforme en ligne pour explorer et partager des eBooks.',
+      },
       image: 'https://camo.githubusercontent.com/64f72ab9c647e00a2852e633c5051e95faa8d39127d16b23e81e2533f4e24eac/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6471376b6a647338732f696d6167652f75706c6f61642f76313639393338313534312f7339386f747636656c6e686d706f74306a68656c2e6a7067',
       projectLink: 'https://github.com/oussamafnh/Ebookoasis?tab=readme-ov-file',
       technologies: [<Php />, <Laravel />],
     },
     {
       title: 'LOOPIFYX',
-      description: 'A web application that provides JavaScript code patterns for creating various star patterns.',
+      descriptions: {
+        en: 'A web application that provides JavaScript code patterns for creating various star patterns.',
+        fr: 'Une application web qui fournit des modèles de code JavaScript pour créer divers motifs d\'étoiles.',
+      },
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121647/cfruk7fmjzwbgrf2zks0.png',
       projectLink: 'https://github.com/oussamafnh/Loopifyx',
       technologies: [<Node />, <Js />, <Reactjs />],
     },
     {
       title: 'FannahTechStore',
-      description: 'A web application designed to facilitate the sale of electronic products online.',
+      descriptions: {
+        en: 'A web application designed to facilitate the sale of electronic products online.',
+        fr: 'Une application web conçue pour faciliter la vente de produits électroniques en ligne.',
+      },
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121033/xvqvtrgpwh3vhyvwz18r.png',
       projectLink: 'https://github.com/oussamafnh/fannahtechstore',
       technologies: [<Php />, <Laravel />, <Js />],
@@ -148,7 +100,7 @@ const Portfolio: React.FC = () => {
 
       <motion.div className="portfolio" id='portfolio' ref={portfolioRef} style={{ opacity: scalP }}>
         <div className="title">
-          <p>Portfolio </p>
+          <p>{t('portfolio.bigtitle')} </p>
         </div>
         <div className="cards">
           {projects.map((project, index) => (
@@ -156,12 +108,12 @@ const Portfolio: React.FC = () => {
               key={index}
               custom={index}
               initial="hidden"
-              animate={isVisible ? "visible" : "hidden"} // Start animation only when section is visible
+              animate={isVisible ? "visible" : "hidden"}
               variants={cardVariants}
             >
               <Card
                 title={project.title}
-                description={project.description}
+                description={i18n.language === 'fr' ? project.descriptions.fr : project.descriptions.en}
                 image={project.image}
                 projectLink={project.projectLink}
                 technologies={project.technologies}

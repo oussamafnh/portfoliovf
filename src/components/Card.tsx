@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import '../style/porfolio.css';
+import { useTranslation } from 'react-i18next';
 
 // Define the props type for the Card
 interface CardProps {
@@ -11,6 +12,8 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ title, description, image, projectLink, technologies }) => {
+    const { t } = useTranslation(); // Access translations
+
     return (
         <div className="card">
             <img src={image} alt={title} className="card-image" />
@@ -22,7 +25,7 @@ const Card: React.FC<CardProps> = ({ title, description, image, projectLink, tec
                         <span key={index}>{TechIcon}</span>
                     ))}
                     <a href={projectLink} target="_blank" rel="noopener noreferrer">
-                        View Project
+                    {t('portfolio.link')}
                     </a>
                 </div>
             </div>

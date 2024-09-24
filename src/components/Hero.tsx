@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 import '../style/hero.css';
 import { Herosvg } from "../assets/svg"
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
 
@@ -34,6 +35,17 @@ const Hero = () => {
         })
     };
 
+
+    const { t } = useTranslation();
+
+    // Les textes traduits
+    const heroTexts = [
+        t('hero.developer'),   // Junior Full Stack Developer
+        t('hero.passion'),     // Coding with Passion
+        t('hero.precision')    // Building with Precision
+    ];
+
+
     // const h1Ref = useRef(null);
     // const h2Ref = useRef(null);
 
@@ -46,31 +58,31 @@ const Hero = () => {
     //     }
     // }, []);
     return (
-        <motion.div className='hero-div' id='home' ref={ref} style={{opacity:scalP}}>
+        <motion.div className='hero-div' id='home' ref={ref} style={{ opacity: scalP }}>
             <div className="hero">
-            <motion.h1
-                initial="hidden"
-                animate="visible"
-                variants={nameVariants}
-                transition={{ duration: 1, ease: 'easeOut' }}
-            >
-                <span className="highlight">OUSSAMA</span> FANNAH
-            </motion.h1>
+                <motion.h1
+                    initial="hidden"
+                    animate="visible"
+                    variants={nameVariants}
+                    transition={{ duration: 1, ease: 'easeOut' }}
+                >
+                    <span className="highlight">OUSSAMA</span> FANNAH
+                </motion.h1>
 
-            <section className="animation">
-                {['Junior Full Stack Developer', 'Coding with Passion', 'Building with Precision'].map((text, i) => (
-                    <motion.div
-                        key={i}
-                        className={i === 0 ? 'first' : i === 1 ? 'second' : 'third'}
-                        initial="hidden"
-                        animate="visible"
-                        custom={i}
-                        variants={sectionVariants}
-                    >
-                        <div>{text}</div>
-                    </motion.div>
-                ))}
-            </section>
+                <section className="animation">
+                    {heroTexts.map((text, i) => (
+                        <motion.div
+                            key={i}
+                            className={i === 0 ? 'first' : i === 1 ? 'second' : 'third'}
+                            initial="hidden"
+                            animate="visible"
+                            custom={i}
+                            variants={sectionVariants}
+                        >
+                            <div>{text}</div>
+                        </motion.div>
+                    ))}
+                </section>
             </div>
 
             <Herosvg />
