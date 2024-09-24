@@ -11,9 +11,11 @@ import Js from '../assets/svgs/languages/js';
 import Reactjs from '../assets/svgs/languages/react';
 import Laravel from "../assets/svgs/languages/laravel";
 import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 
 
 const About = () => {
+    const isMobile = window.innerWidth < 768;
 
     const { t } = useTranslation();
 
@@ -43,7 +45,9 @@ const About = () => {
     return (
         <div className="aboutabout">
 
-            <motion.div className="aboutdiv" id='about' ref={ref2} style={{ opacity: scalP }}>
+            <motion.div className="aboutdiv" id='about' ref={ref2}
+            style={isMobile ? { opacity: 1 } : { opacity: scalP }}
+            >
                 <motion.div className="sec-title" initial="hidden"
                     animate="visible"
                     variants={nameVariants}
@@ -73,8 +77,10 @@ const About = () => {
                         <div className="buttons">
                             <button
                                 className="noselect noselect1"
-                                onClick={() => window.open('https://drive.google.com/file/d/10c5IuzQN6MNFgv9pNoOEipe7NUsqW3Yx/view?usp=drive_link', '_blank')}
-                            >
+                                // onClick={() => window.open('https://drive.google.com/file/d/10c5IuzQN6MNFgv9pNoOEipe7NUsqW3Yx/view?usp=drive_link', '_blank')}
+                                onClick={() => {i18n.language === 'fr' ? window.open('https://drive.google.com/file/d/1HIZ98ang-7QzjtR9YpCPfJjC4XnlSfR5/view?usp=drive_link', '_blank') : window.open('https://drive.google.com/file/d/1vrkEPD6LPOB3Un3f5eE0tb1KHrwKvIwR/view?usp=drive_link', '_blank')}}
+
+>
                                 <span className="text">{t('about.resume')}</span>
                                 <span className="icon">
                                     <svg

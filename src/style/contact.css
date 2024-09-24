@@ -221,97 +221,6 @@
 
 
 
-/* 
-
-
-.GitHub-div {
-    position: absolute;
-    z-index: 1004;
-    bottom: 2vh;
-    right: 7vw;
-}
-
-ul {
-    list-style: none;
-}
-
-.GitHub .icon-content {
-    margin: 0 10px;
-    position: relative;
-}
-
-.GitHub .icon-content .tooltip {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--bg);
-    padding: 6px 10px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.GitHub .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: -50px;
-}
-
-.GitHub .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: var(--bg);
-    background-color: var(--c3);
-    transition: all 0.3s ease-in-out;
-}
-
-.GitHub .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-
-.GitHub .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-}
-
-.GitHub .icon-content a:hover {
-    color: white;
-}
-
-.GitHub .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-}
-
-.GitHub .icon-content a:hover .filled {
-    height: 100%;
-}
-
-.GitHub .icon-content a[data-social="GitHub"] .filled,
-.GitHub .icon-content a[data-social="GitHub"]~.tooltip {
-    background-color: var(--c2);
-}
-
-*/
-
-
 .GitHub-div {
     position: absolute;
     z-index: 1015;
@@ -325,7 +234,6 @@ ul {
 
 .GitHub .icon-content {
     margin: 0 10px;
-    position: relative;
 }
 
 .GitHub .icon-content .tooltip {
@@ -415,7 +323,7 @@ ul {
     .sec3 .title {
         height: auto;
         width: 88%;
-        margin-top: 18vh;
+        margin-top:8vh;
         margin-bottom: -5vh;
         margin-left: 6%;
     }
@@ -433,7 +341,52 @@ ul {
         width: 88%;
 
     }
+    .sec3 .content .leftside .form-container .form-group label {
+        display: block;
+        margin-bottom: -5px;
+        color: var(--c2);
+        font-weight: 600;
+        font-size: 2vh;
+        margin-top: 1vh;
+        letter-spacing: 0.1vw;
+        word-spacing: 0.6vw;
+    }
 
+    .sec3 .content .leftside .form-container .form-group input {
+        width: 95%;
+        padding: 2vh 1vw;
+        color: var(--c2);
+        font-family: inherit;
+        background-color: transparent;
+        border: 0.1vh solid var(--c2);
+    
+    }
+    
+    .sec3 .content .leftside .form-container .form-group textarea {
+        width: 95%;
+        padding: 1vh 1vw;
+        resize: none;
+        color: var(--c2);
+        height: 96px;
+        border: 0.1vh solid var(--c2);
+        background-color: transparent;
+        font-family: inherit;
+    }
+
+    .sec3 .content .leftside .form-container .form-submit-btn {
+        width: 97.5%;
+        padding: 2vh 2vw;
+        color: var(--bg);
+        font-weight: 600;
+        background: #313131;
+        border: 0.2vh solid var(--c2);
+        font-size: inherit;
+        gap: 3vh;
+        margin-top: 2vh;
+        cursor: pointer;
+        letter-spacing: 0.1vw;
+    
+    }
     .sec3 .content .rightside {
         width: 88%;
         margin-left: -2%;
@@ -458,6 +411,6 @@ ul {
         position: absolute;
         z-index: 1004;
         bottom: 2vh;
-        right: 17vw;
+        right: 19vw;
     }
 }

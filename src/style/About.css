@@ -176,14 +176,6 @@
     font-size: 2.3vh;
 }
 
-.rightside .buttons .noselect1 .text {
-    width: 33vh;
-}
-
-.rightside .buttons .noselect2 .text {
-    width: 20vh;
-}
-
 .rightside .buttons button .icon {
     position: static;
     /* border-left: 1px solid #040D12; */

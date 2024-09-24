@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 
 const Portfolio: React.FC = () => {
+  const isMobile = window.innerWidth < 768;
 
   const { t } = useTranslation();
 
@@ -98,7 +99,9 @@ const Portfolio: React.FC = () => {
   return (
     <div className="portfolioportfolio">
 
-      <motion.div className="portfolio" id='portfolio' ref={portfolioRef} style={{ opacity: scalP }}>
+      <motion.div className="portfolio" id='portfolio' ref={portfolioRef}
+        style={isMobile ? { opacity: 1 } : { opacity: scalP }}
+      >
         <div className="title">
           <p>{t('portfolio.bigtitle')} </p>
         </div>
