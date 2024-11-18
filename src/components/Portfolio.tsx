@@ -101,7 +101,7 @@ const Portfolio: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2, // Staggered reveal effect
+        delay: i * 0.2,
         duration: 0.6,
         ease: 'easeOut',
       },
