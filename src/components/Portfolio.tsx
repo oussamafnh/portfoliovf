@@ -9,6 +9,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import '../style//porfolio.css';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
+import Mongodb from '../assets/svgs/languages/mongodb';
+import Expressjs from '../assets/svgs/languages/expressjs';
 
 const Portfolio: React.FC = () => {
   const isMobile = window.innerWidth < 768;
@@ -58,7 +60,17 @@ const Portfolio: React.FC = () => {
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121033/xvqvtrgpwh3vhyvwz18r.png',
       projectLink: 'https://github.com/oussamafnh/fannahtechstore',
       technologies: [<Php />, <Laravel />, <Js />],
-    }
+    },
+    {
+      title: 'CASADEV',
+      descriptions: {
+        en: 'A social media platform for developers to share ideas, connect, and collaborate on projects.',
+        fr: 'Une plateforme de médias sociaux pour les développeurs, permettant de partager des idées, se connecter et collaborer sur des projets.',
+      },
+      image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1731972564/dfeebr34tfcri9it3ifr.png',
+      projectLink: 'https://github.com/oussamafnh/CASADEV', 
+      technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
+    }    
   ];
 
   useEffect(() => {
