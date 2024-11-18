@@ -81,7 +81,7 @@ const Portfolio: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } // Animation starts when 20% of the section is in view
+      { threshold: 0.2 }
     );
 
     if (portfolioRef.current) {
