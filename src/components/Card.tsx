@@ -1,18 +1,19 @@
 import React, { ReactNode } from 'react';
 import '../style/porfolio.css';
 import { useTranslation } from 'react-i18next';
-
-// Define the props type for the Card
+import { Github } from '../assets/svgs/socials/github.jsx';
+import { Globe } from '../assets/svgs/socials/globe.jsx';
 interface CardProps {
     title: string;
     description: string;
     image: string;
     projectLink: string;
-    technologies: ReactNode[]; // Change this to accept JSX elements
+    demoLink: string;
+    technologies: ReactNode[];
 }
 
-const Card: React.FC<CardProps> = ({ title, description, image, projectLink, technologies }) => {
-    const { t } = useTranslation(); // Access translations
+const Card: React.FC<CardProps> = ({ title, description, image, projectLink, demoLink, technologies }) => {
+    const { t } = useTranslation();
 
     return (
         <div className="card">
@@ -24,13 +25,19 @@ const Card: React.FC<CardProps> = ({ title, description, image, projectLink, tec
                     {technologies.map((TechIcon, index) => (
                         <span key={index}>{TechIcon}</span>
                     ))}
-                    <a href={projectLink} target="_blank" rel="noopener noreferrer">
-                    {t('portfolio.link')}
+                    {demoLink !== '' && (
+                        <a className="demo" href={demoLink} target="_blank" rel="noopener noreferrer">
+                            <Globe />
+                        </a>
+                    )}
+
+
+                    <a className='repo' href={projectLink} target="_blank" rel="noopener noreferrer">
+                        <Github />
                     </a>
                 </div>
             </div>
         </div>
     );
 };
-
 export default Card;

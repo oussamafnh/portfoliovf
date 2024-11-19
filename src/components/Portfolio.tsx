@@ -38,6 +38,7 @@ const Portfolio: React.FC = () => {
         fr: 'Une plateforme en ligne pour explorer et partager des eBooks.',
       },
       image: 'https://camo.githubusercontent.com/64f72ab9c647e00a2852e633c5051e95faa8d39127d16b23e81e2533f4e24eac/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6471376b6a647338732f696d6167652f75706c6f61642f76313639393338313534312f7339386f747636656c6e686d706f74306a68656c2e6a7067',
+      demoLink:'',
       projectLink: 'https://github.com/oussamafnh/Ebookoasis?tab=readme-ov-file',
       technologies: [<Php />, <Laravel />],
     },
@@ -48,6 +49,7 @@ const Portfolio: React.FC = () => {
         fr: 'Une application web qui fournit des modèles de code JavaScript pour créer divers motifs d\'étoiles.',
       },
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121647/cfruk7fmjzwbgrf2zks0.png',
+      demoLink:'https://oussamafnh.github.io/Loopifyx/',
       projectLink: 'https://github.com/oussamafnh/Loopifyx',
       technologies: [<Node />, <Js />, <Reactjs />],
     },
@@ -58,6 +60,7 @@ const Portfolio: React.FC = () => {
         fr: 'Une application web conçue pour faciliter la vente de produits électroniques en ligne.',
       },
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121033/xvqvtrgpwh3vhyvwz18r.png',
+      demoLink:'',
       projectLink: 'https://github.com/oussamafnh/fannahtechstore',
       technologies: [<Php />, <Laravel />, <Js />],
     },
@@ -68,6 +71,7 @@ const Portfolio: React.FC = () => {
         fr: 'Une plateforme de médias sociaux pour les développeurs, permettant de partager des idées, se connecter et collaborer sur des projets.',
       },
       image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1731972564/dfeebr34tfcri9it3ifr.png',
+      demoLink:'https://casadev.vercel.app',
       projectLink: 'https://github.com/oussamafnh/CASADEV', 
       technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
     }    
@@ -130,6 +134,7 @@ const Portfolio: React.FC = () => {
                 title={project.title}
                 description={i18n.language === 'fr' ? project.descriptions.fr : project.descriptions.en}
                 image={project.image}
+                demoLink={project.demoLink}
                 projectLink={project.projectLink}
                 technologies={project.technologies}
               />

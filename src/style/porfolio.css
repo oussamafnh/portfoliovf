@@ -79,17 +79,27 @@
     bottom: 0;
 }
 
-.card-content a {
+.card-content .repo {
     position: absolute;
-    right: 10%;
+    right: 5%;
     color: #000000;
     text-decoration: none;
 }
 
-.card-content a:hover {
+.card-content .repo:hover {
     text-decoration: underline;
 }
 
+.card-content .demo {
+    position: absolute;
+    right: 18%;
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-content .demo:hover {
+    text-decoration: underline;
+}
 
 
 
