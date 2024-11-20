@@ -70,7 +70,7 @@ const Portfolio: React.FC = () => {
         en: 'A social media platform for developers to share ideas, connect, and collaborate on projects.',
         fr: 'Une plateforme de médias sociaux pour les développeurs, permettant de partager des idées, se connecter et collaborer sur des projets.',
       },
-      image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1731972564/dfeebr34tfcri9it3ifr.png',
+      image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1732106547/kmrt6cyscmvqdedf9zxc.png',
       demoLink:'https://casadev.vercel.app',
       projectLink: 'https://github.com/oussamafnh/CASADEV', 
       technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
