@@ -13,7 +13,15 @@ const Card: React.FC<CardProps> = ({ title, description, image, projectLink, dem
 
     return (
         <div className="card">
-            <img src={image} alt={title} className="card-image" />
+            {/* <img src={image} alt={title} className="card-image" /> */}
+            {image.endsWith('.mp4') || image.endsWith('.mov') ? (
+                <video className="card-media" autoPlay loop muted playsInline>
+                    <source src={image} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            ) : (
+                <img src={image} alt={title} className="card-image" />
+            )}
             <div className="card-content">
                 <h3>{title}</h3>
                 <p>{description}</p>
