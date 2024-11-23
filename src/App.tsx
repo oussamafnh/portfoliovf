@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { Analytics } from '@vercel/analytics/react';
 import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -26,6 +26,7 @@ function App() {
       ) : (
 
         <div className="mainapp">
+          <Analytics />
           <Navbarx />
           <Linkedin />
           <Hero />
