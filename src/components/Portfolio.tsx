@@ -5,6 +5,7 @@ import Js from '../assets/svgs/languages/js';
 import Reactjs from '../assets/svgs/languages/react';
 import Php from '../assets/svgs/languages/php';
 import Laravel from '../assets/svgs/languages/laravel';
+import Vue from '../assets/svgs/languages/vue';
 import { motion, useScroll, useTransform } from "framer-motion";
 import '../style//porfolio.css';
 import { useTranslation } from 'react-i18next';
@@ -25,7 +26,7 @@ const Portfolio: React.FC = () => {
 
   const { scrollYProgress } = useScroll({
     target: portfolioRef,
-    offset: ["100vh 0vh", "0vh 0vh"]
+    offset: ["350vh 0vh", "0vh 0vh"]
   });
 
   const scalP = useTransform(scrollYProgress, [0.3, 1], [-0.2, 1]);
@@ -74,6 +75,17 @@ const Portfolio: React.FC = () => {
       demoLink:'https://casadev.vercel.app',
       projectLink: 'https://github.com/oussamafnh/CASADEV', 
       technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
+    },
+    {
+      title: "OFN-Weather-Extension",
+      descriptions: {
+        en: "A browser extension that provides real-time weather updates with stunning city backgrounds. Available for Chrome, Firefox, and Safari.",
+        fr: "Une extension de navigateur qui fournit des mises à jour météo en temps réel avec des arrière-plans de villes magnifiques. Disponible pour Chrome, Firefox et Safari."
+      },
+      image: "https://res.cloudinary.com/dq7kjds8s/video/upload/v1732494623/huiueikmga1bukqmvhnf.mp4", 
+      demoLink: "https://ofn-weather.vercel.app",
+      projectLink: "https://github.com/oussamafnh/weather-extension",
+      technologies: [<Vue/>, <Js />]
     }    
   ];
 
