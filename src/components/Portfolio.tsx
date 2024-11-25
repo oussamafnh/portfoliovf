@@ -77,7 +77,7 @@ const Portfolio: React.FC = () => {
       technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
     },
     {
-      title: "Weather-Extension",
+      title: "Weather-Ext",
       descriptions: {
         en: "A browser extension that provides real-time weather updates with stunning city backgrounds. Available for Chrome, Firefox, and Safari.",
         fr: "Une extension de navigateur qui fournit des mises à jour météo en temps réel avec des arrière-plans de villes magnifiques. Disponible pour Chrome, Firefox et Safari."
