@@ -5,7 +5,7 @@ import Js from '../assets/svgs/languages/js';
 import Reactjs from '../assets/svgs/languages/react';
 import Php from '../assets/svgs/languages/php';
 import Laravel from '../assets/svgs/languages/laravel';
-import Vue from '../assets/svgs/languages/vue';
+// import Vue from '../assets/svgs/languages/vue';
 import { motion, useScroll, useTransform } from "framer-motion";
 import '../style//porfolio.css';
 import { useTranslation } from 'react-i18next';
