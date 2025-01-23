@@ -75,18 +75,7 @@ const Portfolio: React.FC = () => {
       demoLink:'https://casadev.vercel.app',
       projectLink: 'https://github.com/oussamafnh/CASADEV', 
       technologies: [<Node />, <Expressjs />, <Mongodb />, <Reactjs />],
-    },
-    {
-      title: "Weather-Ext",
-      descriptions: {
-        en: "A browser extension that provides real-time weather updates with stunning city backgrounds. Available for Chrome, Firefox, and Safari.",
-        fr: "Une extension de navigateur qui fournit des mises à jour météo en temps réel avec des arrière-plans de villes magnifiques. Disponible pour Chrome, Firefox et Safari."
-      },
-      image: "https://res.cloudinary.com/dq7kjds8s/video/upload/v1732494623/huiueikmga1bukqmvhnf.mp4", 
-      demoLink: "https://ofn-weather.vercel.app",
-      projectLink: "https://github.com/oussamafnh/weather-extension",
-      technologies: [<Vue/>, <Js />]
-    }    
+    }  
   ];
 
   useEffect(() => {

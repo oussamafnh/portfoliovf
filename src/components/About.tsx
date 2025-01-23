@@ -69,7 +69,7 @@ const About = () => {
                         <div className="skills">
                             <p className="title">{t('about.skillsTitle')}</p>
                             <div className="skills-icons">
-                                <p className='stline'>JavaScript <Js /> , React <Reactjs /> , Node.js <Node /> , Php <Php /> , Laravel <Laravel /> ,  , mySQL <Mysql /> , MongoDB <Mongodb /> , etc...</p>
+                                <p className='stline'>JavaScript <Js /> , React <Reactjs /> , Node.js <Node /> , Php <Php /> , Laravel <Laravel /> , mySQL <Mysql /> , MongoDB <Mongodb /> , etc...</p>
                             </div>
                         </div>
 
