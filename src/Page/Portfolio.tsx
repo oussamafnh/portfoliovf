@@ -16,11 +16,9 @@ const techIcons = {
 };
 
 const Portfolio = () => {
-    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const projectsContainerRef = useRef<HTMLDivElement>(null);
     const [scrollRange, setScrollRange] = useState(0);
-    const [windowWidth, setWindowWidth] = useState(0);
 
     const projects = [
         {
@@ -83,9 +81,6 @@ const Portfolio = () => {
                 const scrollableWidth = totalWidth - viewportWidth + (viewportWidth * 0.2);
 
                 setScrollRange(scrollableWidth);
-                setWindowWidth(viewportWidth);
-
-                // Set height to 100vh per project for controlled vertical scroll
                 containerRef.current.style.height = `${projects.length * 100}vh`;
             }
         };
