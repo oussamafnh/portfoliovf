@@ -10,16 +10,16 @@
         }
     },
     "hero": {
-        "developer": "Junior Full Stack Developer",
+        "developer": "Full Stack Developer",
         "passion": "Coding with Passion",
         "precision": "Building with Precision"
     },
     "about": {
         "bigtitle": "About",
-        "title": "About me :",
-        "intro": "Hi, I'm <span> Oussama Fannah </span>, a Full Stack Web Developer with a Bac+2 in web development. I’m passionate about technology and skilled in JavaScript, React, Node.js, and more.",
-        "secondLine": "With a strong foundation and a drive for continuous learning, I’m eager to embrace new challenges and contribute to innovative projects in the tech industry.",
-        "skillsTitle": "Skills :",
+        "title": "About me:",
+        "intro": "Hi, I'm Oussama Fannah, a Full Stack Web Developer . I'm passionate about technology and skilled in JavaScript, React, Node.js, and more.",
+        "secondLine": "With a strong foundation and a drive for continuous learning, I'm eager to embrace new challenges and contribute to innovative projects in the tech industry.",
+        "skillsTitle": "Skills:",
         "resume": "Download My Resume",
         "contact": "Contact"
     },
