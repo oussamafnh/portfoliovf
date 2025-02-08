@@ -22,7 +22,7 @@ const Hero = () => {
     { icon: <FiGithub />, name: "GitHub", url: "https://github.com/oussamafnh" },
     { icon: <FaXTwitter />, name: "Twitter", url: "https://x.com/OTFnnh" },
     { icon: <FiInstagram />, name: "Instagram", url: "https://www.instagram.com/oussama.fnh/" },
-]
+  ]
 
   const heroTexts = [t("hero.developer"), t("hero.passion"), t("hero.precision")]
 
@@ -40,6 +40,8 @@ const Hero = () => {
           <motion.a
             key={index}
             href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative flex items-center group"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}

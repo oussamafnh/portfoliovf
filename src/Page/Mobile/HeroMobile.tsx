@@ -40,11 +40,13 @@ const HeroMobile = () => {
                     <motion.a
                         key={index}
                         href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="relative flex items-center group"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <span className="text-xl text-zinc-900 transition-colors">
+                        <span className="text-2xl text-zinc-900 transition-colors">
                             {link.icon}
                         </span>
                     </motion.a>
