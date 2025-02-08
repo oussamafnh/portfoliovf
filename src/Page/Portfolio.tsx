@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { FaNodeJs, FaJs, FaReact, FaPhp, FaLaravel, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
@@ -15,6 +16,7 @@ const techIcons = {
 };
 
 const Portfolio = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const projectsContainerRef = useRef<HTMLDivElement>(null);
     const [scrollRange, setScrollRange] = useState(0);
@@ -71,14 +73,10 @@ const Portfolio = () => {
         const updateDimensions = () => {
             if (projectsContainerRef.current && containerRef.current) {
                 const viewportWidth = window.innerWidth;
-                const projectWidth = viewportWidth * 0.8; // 80vw
-                const gap = viewportWidth * 0.15; // 15vw
-
-                // Calculate total width including all projects and gaps
+                const projectWidth = viewportWidth * 0.8;
+                const gap = viewportWidth * 0.15; 
                 const totalWidth = (projectWidth + gap) * projects.length;
-                // Account for the initial left padding and viewport width
                 const scrollableWidth = totalWidth - viewportWidth + (viewportWidth * 0.2);
-
                 setScrollRange(scrollableWidth);
                 containerRef.current.style.height = `${projects.length * 100}vh`;
             }
@@ -114,7 +112,7 @@ const Portfolio = () => {
                     className="absolute top-8 left-[10vw] z-50"
                 >
                     <h2 className="text-2xl font-bold text-lime-400  transition-colors duration-300">
-                        PORTFOLIO
+                        {t('PORTFOLIO')}
                     </h2>
                 </motion.div>
                 <motion.div
@@ -174,7 +172,7 @@ const Portfolio = () => {
                                                 className="px-4 py-2 rounded-full bg-lime-400/10 hover:bg-lime-400/20 border border-lime-400/30 backdrop-blur-sm text-lime-400 transition-all flex items-center gap-2"
                                             >
                                                 <FaExternalLinkAlt className="w-4 h-4" />
-                                                <span>Demo</span>
+                                                <span>{t('Demo')}</span>
                                             </motion.a>
                                         )}
                                         <motion.a
@@ -184,7 +182,7 @@ const Portfolio = () => {
                                             className="px-4 py-2 rounded-full bg-gray-600/10 hover:bg-gray-600/20 border border-gray-600/30 backdrop-blur-sm text-gray-300 transition-all flex items-center gap-2"
                                         >
                                             <FaGithub className="w-4 h-4" />
-                                            <span>GitHub</span>
+                                            <span>{t('GitHub')}</span>
                                         </motion.a>
                                     </div>
                                 </div>
@@ -197,7 +195,6 @@ const Portfolio = () => {
         </motion.div >
     );
 };
-
 
 
 export default Portfolio;
