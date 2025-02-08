@@ -3,9 +3,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { LightLogo } from "../assets/logo";
+import { LightLogo } from "@/assets/logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-// import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -136,16 +135,16 @@ const Navbar = () => {
                     >
                       <motion.span
                         className="relative z-10"
-                        initial={{ color: "#000000" }} // Black initial color
+                        initial={{ color: "#000000" }}
                         whileHover={{
-                          color: "#a3e635", // lime-400
-                          textShadow: "0 0 15px rgba(163, 230, 53, 0.4)", // lime-400 glow
+                          color: "#a3e635", 
+                          textShadow: "0 0 15px rgba(163, 230, 53, 0.4)",
                           transition: {
                             color: { duration: 0.2 },
                             textShadow: { duration: 0.3 }
                           }
                         }}
-                        whileTap={{ color: "#84cc16" }} // lime-500 for click
+                        whileTap={{ color: "#84cc16" }} 
                       >
                         {t(item.label)}
                         <motion.div

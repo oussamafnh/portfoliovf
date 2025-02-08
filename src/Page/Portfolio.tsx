@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 import { FaNodeJs, FaJs, FaReact, FaPhp, FaLaravel, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
+import projects from '@/assets/projects.json';
 
 const techIcons = {
     "Node.js": <FaNodeJs className="w-5 h-5 text-green-500" />,
@@ -14,60 +15,11 @@ const techIcons = {
     "MongoDB": <SiMongodb className="w-5 h-5 text-green-600" />,
     "Express.js": <SiExpress className="w-5 h-5 text-gray-500" />,
 };
-
 const Portfolio = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const projectsContainerRef = useRef<HTMLDivElement>(null);
     const [scrollRange, setScrollRange] = useState(0);
-
-    const projects = [
-        {
-            title: 'E-BookOasis',
-            descriptions: {
-                en: 'An online platform for exploring and sharing eBooks.',
-                fr: 'Une plateforme en ligne pour explorer et partager des eBooks.',
-            },
-            image: 'https://camo.githubusercontent.com/64f72ab9c647e00a2852e633c5051e95faa8d39127d16b23e81e2533f4e24eac/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6471376b6a647338732f696d6167652f75706c6f61642f76313639393338313534312f7339386f747636656c6e686d706f74306a68656c2e6a7067',
-            demoLink: '',
-            projectLink: 'https://github.com/oussamafnh/Ebookoasis?tab=readme-ov-file',
-            technologies: ["PHP", "Laravel"],
-        },
-        {
-            title: 'LOOPIFYX',
-            descriptions: {
-                en: 'A web application that provides JavaScript code patterns for creating various star patterns.',
-                fr: 'Une application web qui fournit des modèles de code JavaScript pour créer divers motifs d\'étoiles.',
-            },
-            image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1738975779/qibm57sq7lh59oxgboh6.png',
-            demoLink: 'https://oussamafnh.github.io/Loopifyx/',
-            projectLink: 'https://github.com/oussamafnh/Loopifyx',
-            technologies: ["Node.js", "JavaScript", "React"],
-        },
-        {
-            title: 'FannahTechStore',
-            descriptions: {
-                en: 'A web application designed to facilitate the sale of electronic products online.',
-                fr: 'Une application web conçue pour faciliter la vente de produits électroniques en ligne.',
-            },
-            image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1727121033/xvqvtrgpwh3vhyvwz18r.png',
-            demoLink: '',
-            projectLink: 'https://github.com/oussamafnh/fannahtechstore',
-            technologies: ["PHP", "Laravel", "JavaScript"],
-        },
-        {
-            title: 'CASADEV',
-            descriptions: {
-                en: 'A social media platform for developers to share ideas, connect, and collaborate on projects.',
-                fr: 'Une plateforme de médias sociaux pour les développeurs, permettant de partager des idées, se connecter et collaborer sur des projets.',
-            },
-            image: 'https://res.cloudinary.com/dq7kjds8s/image/upload/v1738900148/wg9pr54agl8qrkuresx3.png',
-            demoLink: 'https://casadev.vercel.app',
-            projectLink: 'https://github.com/oussamafnh/CASADEV',
-            technologies: ["Node.js", "Express.js", "MongoDB", "React"],
-        }
-    ];
-
 
     useEffect(() => {
         const updateDimensions = () => {

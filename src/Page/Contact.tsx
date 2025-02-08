@@ -57,8 +57,6 @@ const Contact = () => {
                                     {t('contact.name')}
                                 </label>
                             </div>
-
-                            {/* Email Input */}
                             <div className="relative group">
                                 <input
                                     required
@@ -76,8 +74,6 @@ const Contact = () => {
                                     {t('contact.email')}
                                 </label>
                             </div>
-
-                            {/* Message Textarea */}
                             <div className="relative group">
                                 <textarea
                                     required
@@ -104,8 +100,6 @@ const Contact = () => {
                             <FiSend className="text-xl" />
                             {t('contact.submit')}
                         </button>
-
-                        {/* Success Message */}
                         {isSuccess && (
                             <motion.div
                                 initial={{ y: 20, opacity: 0 }}
@@ -116,8 +110,6 @@ const Contact = () => {
                             </motion.div>
                         )}
                     </motion.form>
-
-                    {/* Right Column - Contact Info */}
                     <motion.div
                         className="relative hidden md:block  mb-10"
                         initial={{ x: 50, opacity: 0 }}
@@ -125,7 +117,6 @@ const Contact = () => {
                         transition={{ delay: 0.4 }}
                     >
                         <div className="absolute bottom-0 right-0 space-y-8 w-full">
-                            {/* Contact Details */}
                             <div className="space-y-6 border-l-2 border-zinc-700 pl-6">
                                 <div className="flex items-center gap-4 text-lime-400">
                                     <FiMail className="text-2xl" />
@@ -137,8 +128,6 @@ const Contact = () => {
                                     <p className="text-lg">+212 687953709</p>
                                 </div>
                             </div>
-
-                            {/* Copyright */}
                             <div className="border-t border-zinc-700 pt-6">
                                 <p className="text-zinc-500 text-right">
                                     2025 © Oussama Fannah
@@ -148,23 +137,6 @@ const Contact = () => {
                     </motion.div>
                 </div>
 
-                {/* Mobile Contact Info */}
-                <div className="md:hidden mt-12 border-t border-zinc-700 pt-8">
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-4 text-lime-400 justify-center">
-                            <FiMail className="text-xl" />
-                            <p className="text-md">oussamafannah4@gmail.com</p>
-                        </div>
-
-                        <div className="flex items-center gap-4 text-lime-400 justify-center">
-                            <FiPhone className="text-xl" />
-                            <p className="text-md">+212 687953709</p>
-                        </div>
-                    </div>
-                    <p className="text-zinc-500 text-center mt-6">
-                        2025 © Oussama Fannah
-                    </p>
-                </div>
             </div>
         </motion.section>
     );

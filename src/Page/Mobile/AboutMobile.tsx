@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import i18n from '../i18n';
+import i18n from '../../i18n';
 import img from "@/assets/imgs/img.jpg";
-import { TechIcons } from "./TechIcons";
-const About = () => {
+import { TechIcons } from "../TechIcons";
+const AboutMobile  = () => {
     const { t } = useTranslation();
     const ref = useRef(null);
 
@@ -13,7 +13,7 @@ const About = () => {
         <motion.section 
             ref={ref}
             id="about"
-            className="relative h-[110vh] bg-zinc-950 overflow-hidden w-[100vw] px-[10vw] "
+            className="relative h-auto bg-zinc-950 overflow-hidden w-[100vw] px-[10vw] "
         >
 
             <div className="container mx-auto py-24 relative z-10">
@@ -57,7 +57,7 @@ const About = () => {
                         </div>
                         <div className="flex flex-wrap gap-6 mt-12">
                             <motion.a
-                                className="relative bg-lime-400/10 hover:bg-lime-400/20 border border-lime-400/30 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
+                                className=" w-[93%] items-center relative bg-lime-400/10 hover:bg-lime-400/20 border border-lime-400/30 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
                                 href={i18n.language === 'fr' ? 
                                     'https://drive.google.com/file/d/1BwjRyodw-g8o0UftGUbEAETPvkIroUw4/view' : 
                                     'https://drive.google.com/file/d/1GJgy2_Mlwfe2RjDMkB3MDoWx184yX45g/view'}
@@ -75,7 +75,7 @@ const About = () => {
                             </motion.a>
 
                             <motion.button
-                                className="relative bg-zinc-800/50 hover:bg-zinc-700/50 border border-zinc-700/50 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
+                                className="relative  w-[93%] bg-zinc-800/50 hover:bg-zinc-700/50 border border-zinc-700/50 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
                                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                             >
                                 <span className="text-zinc-300 font-medium">
@@ -95,4 +95,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default AboutMobile;

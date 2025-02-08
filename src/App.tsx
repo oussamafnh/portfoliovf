@@ -7,11 +7,15 @@ import Portfolio from './Page/Portfolio'
 import ScrollProgress from './Page/ScrollProgress'
 import { Analytics } from '@vercel/analytics/react';
 
+import PortfolioMobile from './Page/Mobile/PortfolioMobile'
+import HeroMobile from './Page/Mobile/HeroMobile'
+import NavbarMobile from './Page/Mobile/NavbarMobile'
+import AboutMobile from './Page/Mobile/AboutMobile'
 
 function App() {
   return (
     <>
-      <div className='relative'>
+      <div className='desktop'>
         <Navbar />
         <div id="home" className='homepage'>
           <Hero />
@@ -22,11 +26,33 @@ function App() {
         <div id="portfolio">
           <Portfolio />
         </div>
+        <div id="contact" className='relative'>
+          <Contact />
+        </div>
+        <ScrollProgress />
       </div>
-      <div id="contact" className='relative'>
-        <Contact />
+
+      <div className='mobile'>
+        <NavbarMobile />
+        <div id="homeMobile" className='homepage'>
+          <HeroMobile />
+        </div>
+        <div id="aboutMobile">
+          <AboutMobile />
+        </div>
+        <div id="portfolioMobile">
+          <PortfolioMobile />
+        </div>
+        <div id="contactMobile" className='relative'>
+          <Contact />
+        </div>
       </div>
-      <ScrollProgress />
+
+
+
+
+
+
       <Analytics />
     </>
   )

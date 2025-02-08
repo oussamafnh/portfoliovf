@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { HeroHighlight } from "@/components/ui/hero-highlight"
@@ -20,11 +18,11 @@ const Hero = () => {
   const { t } = useTranslation()
 
   const socialLinks = [
-    { icon: <FiLinkedin />, name: "LinkedIn", url: "#" },
-    { icon: <FiGithub />, name: "GitHub", url: "#" },
-    { icon: <FaXTwitter />, name: "Twitter", url: "#" },
-    { icon: <FiInstagram />, name: "Instagram", url: "#" },
-  ]
+    { icon: <FiLinkedin />, name: "LinkedIn", url: "https://www.linkedin.com/in/oussama-fannah/" },
+    { icon: <FiGithub />, name: "GitHub", url: "https://github.com/oussamafnh" },
+    { icon: <FaXTwitter />, name: "Twitter", url: "https://x.com/OTFnnh" },
+    { icon: <FiInstagram />, name: "Instagram", url: "https://www.instagram.com/oussama.fnh/" },
+]
 
   const heroTexts = [t("hero.developer"), t("hero.passion"), t("hero.precision")]
 
@@ -74,7 +72,6 @@ const Hero = () => {
         <div className="absolute inset-0 flex items-center justify-center text-zinc-900 font-bold text-base">2025</div>
       </motion.div>
       <div className="h-full flex flex-col items-center justify-center">
-        {/* Centered Name */}
         <div className="text-center">
           <motion.h1
             className=" oussamafannah_hero text-7xl md:text-9xl font-bold text-lime-400 mb-8"

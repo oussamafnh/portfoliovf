@@ -1,0 +1,46 @@
+[
+    {
+        "title": "E-BookOasis",
+        "descriptions": {
+            "en": "An online platform for exploring and sharing eBooks.",
+            "fr": "Une plateforme en ligne pour explorer et partager des eBooks."
+        },
+        "image": "/image1.png",
+        "demoLink": "",
+        "projectLink": "https://github.com/oussamafnh/Ebookoasis?tab=readme-ov-file",
+        "technologies": ["PHP", "Laravel"]
+    },
+    {
+        "title": "LOOPIFYX",
+        "descriptions": {
+            "en": "A web application that provides JavaScript code patterns for creating various star patterns.",
+            "fr": "Une application web qui fournit des modèles de code JavaScript pour créer divers motifs d'étoiles."
+        },
+        "image": "/image2.png",
+        "demoLink": "https://oussamafnh.github.io/Loopifyx/",
+        "projectLink": "https://github.com/oussamafnh/Loopifyx",
+        "technologies": ["Node.js", "JavaScript", "React"]
+    },
+    {
+        "title": "FannahTechStore",
+        "descriptions": {
+            "en": "A web application designed to facilitate the sale of electronic products online.",
+            "fr": "Une application web conçue pour faciliter la vente de produits électroniques en ligne."
+        },
+        "image": "/image3.png",
+        "demoLink": "",
+        "projectLink": "https://github.com/oussamafnh/fannahtechstore",
+        "technologies": ["PHP", "Laravel", "JavaScript"]
+    },
+    {
+        "title": "CASADEV",
+        "descriptions": {
+            "en": "A social media platform for developers to share ideas, connect, and collaborate on projects.",
+            "fr": "Une plateforme de médias sociaux pour les développeurs, permettant de partager des idées, se connecter et collaborer sur des projets."
+        },
+        "image": "/image4.png",
+        "demoLink": "https://casadev.vercel.app",
+        "projectLink": "https://github.com/oussamafnh/CASADEV",
+        "technologies": ["Node.js", "Express.js", "MongoDB", "React"]
+    }
+]

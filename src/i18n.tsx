@@ -12,10 +12,10 @@ i18n.use(initReactI18next).init({
       translation: fr
     }
   },
-  lng: 'en', // Default language
-  fallbackLng: 'en', // Fallback language if the current language doesn't have translations
+  lng: 'en',
+  fallbackLng: 'en',
   interpolation: {
-    escapeValue: false // React already escapes output
+    escapeValue: false
   }
 });
 
