@@ -5,9 +5,9 @@ import Hero from './Page/Hero'
 import Navbar from './Page/Navbar'
 import Portfolio from './Page/Portfolio'
 import ScrollProgress from './Page/ScrollProgress'
+import { Analytics } from '@vercel/analytics/react';
 
 
-// src/App.tsx
 function App() {
   return (
     <>
@@ -27,6 +27,7 @@ function App() {
         <Contact />
       </div>
       <ScrollProgress />
+      <Analytics />
     </>
   )
 }
