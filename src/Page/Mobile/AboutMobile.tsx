@@ -32,7 +32,7 @@ const AboutMobile  = () => {
                     </motion.div>
 
                     <motion.div 
-                        className="space-y-8"
+                        className="space-y-8 w-[100%] "
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
@@ -57,7 +57,7 @@ const AboutMobile  = () => {
                         </div>
                         <div className="flex flex-wrap gap-6 mt-12">
                             <motion.a
-                                className=" w-[93%] items-center relative bg-lime-400/10 hover:bg-lime-400/20 border border-lime-400/30 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
+                                className=" w-[100%] items-center justify-center items-center relative bg-lime-400/10 hover:bg-lime-400/20 border border-lime-400/30 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
                                 href={i18n.language === 'fr' ? 
                                     'https://drive.google.com/file/d/1BwjRyodw-g8o0UftGUbEAETPvkIroUw4/view' : 
                                     'https://drive.google.com/file/d/1GJgy2_Mlwfe2RjDMkB3MDoWx184yX45g/view'}
@@ -75,7 +75,7 @@ const AboutMobile  = () => {
                             </motion.a>
 
                             <motion.button
-                                className="relative  w-[93%] bg-zinc-800/50 hover:bg-zinc-700/50 border border-zinc-700/50 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
+                                className="relative items-center justify-center w-[100%] bg-zinc-800/50 hover:bg-zinc-700/50 border border-zinc-700/50 rounded-xl px-8 py-4 flex items-center gap-4 backdrop-blur-sm transition-all"
                                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                             >
                                 <span className="text-zinc-300 font-medium">

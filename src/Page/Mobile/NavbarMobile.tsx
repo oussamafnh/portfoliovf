@@ -27,7 +27,7 @@ const NavbarMobile = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed bottom-[3vh] w-[80vw] ml-[10vw] bg-white/100 border border-gray-300 z-50 h-16 flex items-center rounded-[20px]"    >
+      className="fixed bottom-[3vh] w-[80vw] ml-[10vw] bg-white/100 border border-gray-300 z-50 h-16 flex items-center rounded-[10px]"    >
       <div className="w-full px-4 md:px-6 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0 }}

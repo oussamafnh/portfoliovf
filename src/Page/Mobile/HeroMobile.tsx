@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { HeroHighlight } from "@/components/ui/hero-highlight"
 import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi"
 import { FaXTwitter } from "react-icons/fa6"
-import { useState, useEffect } from "react"
+import { useState, useEffect, Fragment } from "react"
 import { AnimatePresence } from "framer-motion"
 
 const HeroMobile = () => {
@@ -29,7 +29,7 @@ const HeroMobile = () => {
     const heroTexts = [t("hero.developer"), t("hero.passion"), t("hero.precision")]
 
     return (
-        <HeroHighlight containerClassName="h-[90vh] w-[100vw] bg-white relative">
+        <HeroHighlight containerClassName="h-[85vh] w-[100vw] bg-white relative">
             <motion.div
                 className="absolute bottom-[10vh] left-0 right-0 flex justify-center gap-6 z-50"
                 initial={{ opacity: 0, y: 20 }}
@@ -52,21 +52,30 @@ const HeroMobile = () => {
                     </motion.a>
                 ))}
             </motion.div>
-            <motion.div
-                className="absolute top-6 left-0 right-0 flex items-center justify-center gap-2 overflow-hidden"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "linear"
-                }}
-            >
-                <div className="flex items-center gap-2 whitespace-nowrap">
-                    <span className="text-zinc-900 text-sm font-bold">• OPEN TO WORK •</span>
-                    <span className="text-zinc-900 font-bold">2025</span>
-                    <span className="text-zinc-900 text-sm font-bold">• OPEN TO WORK •</span>
-                </div>
+
+
+            <motion.div className="absolute top-6 left-0 w-screen overflow-hidden">
+                <motion.div
+                    className="flex items-center gap-4 whitespace-nowrap"
+                    animate={{ x: ["0%", "-300%"] }}
+                    transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "linear",
+                    }}
+                >
+                    {[...Array(8)].map((_, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                            <span className="text-zinc-900 font-bold">2025</span>
+                            <span className="text-zinc-900 text-sm font-bold">• OPEN TO WORK •</span>
+                            <span className="text-zinc-900 font-bold">2025</span>
+                            <span className="text-zinc-900 text-sm font-bold">• OPEN TO WORK •</span>
+                        </div>
+                    ))}
+                </motion.div>
             </motion.div>
+
+
             <div className="h-full flex flex-col items-center justify-center px-4">
                 <div className="text-center oussamafannah_hero">
                     <motion.h1

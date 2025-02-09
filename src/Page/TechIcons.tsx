@@ -36,7 +36,7 @@ export const TechIcons = () => {
                     whileInView={{ scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                 >
-                    <div className="w-7 h-7 text-lime-400 flex items-center justify-center">
+                    <div className="w-6 h-6 text-lime-400 flex items-center justify-center">
                         {icon.component}
                     </div>
                 </motion.div>

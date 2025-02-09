@@ -38,7 +38,6 @@ const ScrollProgress = () => {
       onClick={scrollToTop}
     >
       <div className="relative w-16 h-16" onClick={scrollToTop}>
-        {/* Progress Circle */}
         <svg className="w-full h-full transform -rotate-90">
           <circle
             cx="30"
@@ -59,10 +58,8 @@ const ScrollProgress = () => {
             strokeDashoffset={175.929 * (scrollProgress / 100)}
           />
         </svg>
-
-        {/* Arrow Icon */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <FiArrowUp className="w-6 h-6 text-lime-400" />
+          <FiArrowUp className="w-6 h-6 text-lime-400 pr-1" />
         </div>
       </div>
     </motion.div>
