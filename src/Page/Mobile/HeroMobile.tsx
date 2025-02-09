@@ -1,11 +1,9 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { HeroHighlight } from "@/components/ui/hero-highlight"
 import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi"
 import { FaXTwitter } from "react-icons/fa6"
-import { useState, useEffect, Fragment } from "react"
+import { useState, useEffect } from "react"
 import { AnimatePresence } from "framer-motion"
 
 const HeroMobile = () => {
