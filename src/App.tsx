@@ -11,7 +11,7 @@ import PortfolioMobile from './Page/Mobile/PortfolioMobile'
 import HeroMobile from './Page/Mobile/HeroMobile'
 import NavbarMobile from './Page/Mobile/NavbarMobile'
 import AboutMobile from './Page/Mobile/AboutMobile'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 function App() {
   return (
     <>
@@ -54,6 +54,7 @@ function App() {
 
 
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
