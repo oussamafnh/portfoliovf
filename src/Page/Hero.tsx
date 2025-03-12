@@ -5,7 +5,7 @@ import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi"
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-
+import { Icon } from "@iconify/react";
 const Hero = () => {
   const [currentSlogan, setCurrentSlogan] = useState(0);
 
@@ -17,13 +17,14 @@ const Hero = () => {
   }, []);
   const { t } = useTranslation()
 
+
   const socialLinks = [
     { icon: <FiLinkedin />, name: "LinkedIn", url: "https://www.linkedin.com/in/oussama-fannah/" },
     { icon: <FiGithub />, name: "GitHub", url: "https://github.com/oussamafnh" },
     { icon: <FaXTwitter />, name: "Twitter", url: "https://x.com/OTFnnh" },
     { icon: <FiInstagram />, name: "Instagram", url: "https://www.instagram.com/oussama.fnh/" },
-  ]
-
+    { icon: <Icon icon="simple-icons:fiverr" />, name: "Fiverr", url: "https://www.fiverr.com/oussamafannah" },
+  ];
   const heroTexts = [t("hero.developer"), t("hero.passion"), t("hero.precision")]
 
   return (
