@@ -3,20 +3,24 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import blogData from "./blog.json";
 import { BLOGLogo } from "@/assets/Bloglogo";
-import Llt  from "@/components/ui/&lt"
+import Llt from "@/components/ui/&lt";
 import { Link, useParams } from "react-router-dom";
+import { QuillDeltaToHtmlConverter } from "quill-delta-to-html"; // Import the converter
 
 const BlogPost = () => {
     const { id } = useParams();
     const blog = blogData.find((b) => b.id === Number(id));
 
-    const [content, setContent] = useState<string>('');
+    const [content, setContent] = useState<string>(""); // Ensure content is a string
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             if (blog && blog.content) {
-                setContent(blog.content);
+                // Convert Delta to HTML
+                const converter = new QuillDeltaToHtmlConverter(blog.content.ops, {});
+                const htmlContent = converter.convert();
+                setContent(htmlContent); // Set the HTML string
             }
             setIsLoading(false);
         }, 1000);
@@ -35,7 +39,6 @@ const BlogPost = () => {
         <div className="min-h-screen bg-white text-black">
             <nav className="h-[7vh] bg-white border-b border-gray-200 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-10">
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
-
                     <Llt /> Blog
                 </Link>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
@@ -46,7 +49,7 @@ const BlogPost = () => {
             <div className="pt-[8vh] px-[2.5vw]">
                 <div className="flex justify-between items-center mb-6">
                     <div className="h-12 bg-gray-200 rounded w-[60vw] animate-pulse"></div>
-                    <div className="h-12 bg-gray-200 rounded w-[15vw] ml-[20vw] lg:w-[5vw] lg:ml-[30vw]  animate-pulse"></div>
+                    <div className="h-12 bg-gray-200 rounded w-[15vw] ml-[20vw] lg:w-[5vw] lg:ml-[30vw] animate-pulse"></div>
                 </div>
                 <div className="h-[80vh] bg-gray-200 rounded w-[95vw] animate-pulse"></div>
             </div>
@@ -58,7 +61,6 @@ const BlogPost = () => {
         <div className="min-h-screen flex justify-center items-center">
             <nav className="h-[7vh] bg-white border-b border-gray-200 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-10">
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
-
                     <Llt /> Blog
                 </Link>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
@@ -66,7 +68,7 @@ const BlogPost = () => {
                 </div>
                 <div className="w-24"></div>
             </nav>
-            <div className="text-center pl-[48vw] ">Post not found</div>
+            <div className="text-center pl-[48vw]">Post not found</div>
         </div>
     );
 
@@ -74,7 +76,6 @@ const BlogPost = () => {
         <div className="min-h-screen bg-white text-black">
             <nav className="h-[7vh] bg-white border-b border-gray-200 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-10">
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
-
                     <Llt /> Blog
                 </Link>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
@@ -91,12 +92,12 @@ const BlogPost = () => {
                     value={content}
                     readOnly={true}
                     modules={{ toolbar: false }}
-                    style={{ border: 'none' }}
+                    style={{ border: "none" }}
                     className="border-none bg-white"
                 />
             </div>
         </div>
     );
-
 };
+
 export default BlogPost;
