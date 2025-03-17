@@ -44,7 +44,7 @@ const Blog = () => {
                 <Link to="/" className="hover:text-lime-500 transition-colors duration-200">
                     &lt; Portfolio
                 </Link>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-24 hidden md:block">
                     <BLOGLogo />
                 </div>
                 <div className="w-24 flex items-center justify-end">
@@ -54,7 +54,7 @@ const Blog = () => {
             <div className="pt-[8vh] p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {[...Array(3)].map((_, i) => (
-                        <Card key={i} className="bg-white border border-gray-200 lg:w-[22.5vw] w-[88vw] md:w-[22.5vw]">
+                        <Card key={i} className="bg-white border border-gray-200 lg:w-[22.5vw] w-[84vw] md:w-[22.5vw]">
                             <CardContent className="p-0">
                                 <div className="bg-gray-200 w-full h-48 animate-pulse"></div>
                                 <div className="p-4 flex justify-between items-center">
@@ -77,7 +77,7 @@ const Blog = () => {
                 <Link to="/" className="hover:text-lime-500 transition-colors duration-200">
                     &lt; Portfolio
                 </Link>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-24 hidden md:block">
                     <BLOGLogo />
                 </div>
                 <div className="w-24 flex items-center justify-end">

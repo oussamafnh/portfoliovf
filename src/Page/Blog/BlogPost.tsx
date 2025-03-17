@@ -5,22 +5,21 @@ import blogData from "./blog.json";
 import { BLOGLogo } from "@/assets/Bloglogo";
 import Llt from "@/components/ui/&lt";
 import { Link, useParams } from "react-router-dom";
-import { QuillDeltaToHtmlConverter } from "quill-delta-to-html"; // Import the converter
+import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 
 const BlogPost = () => {
     const { id } = useParams();
     const blog = blogData.find((b) => b.id === Number(id));
 
-    const [content, setContent] = useState<string>(""); // Ensure content is a string
+    const [content, setContent] = useState<string>("");
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             if (blog && blog.content) {
-                // Convert Delta to HTML
                 const converter = new QuillDeltaToHtmlConverter(blog.content.ops, {});
                 const htmlContent = converter.convert();
-                setContent(htmlContent); // Set the HTML string
+                setContent(htmlContent);
             }
             setIsLoading(false);
         }, 1000);
@@ -41,7 +40,7 @@ const BlogPost = () => {
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
                     <Llt /> Blog
                 </Link>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-24 hidden md:block">
                     <BLOGLogo />
                 </div>
                 <div className="w-24"></div>
@@ -63,7 +62,7 @@ const BlogPost = () => {
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
                     <Llt /> Blog
                 </Link>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-24 hidden md:block">
                     <BLOGLogo />
                 </div>
                 <div className="w-24"></div>
@@ -78,7 +77,7 @@ const BlogPost = () => {
                 <Link to="/blog" className="hover:text-lime-500 transition-colors duration-200">
                     <Llt /> Blog
                 </Link>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-24">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-24 hidden md:block">
                     <BLOGLogo />
                 </div>
                 <div className="w-24"></div>
