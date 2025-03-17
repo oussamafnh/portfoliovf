@@ -1,9 +1,9 @@
 {
     "navbar": {
-        "home": "Accueil",
         "about": "Présentation",
         "portfolio": "Portfolio",
         "contact": "Contact",
+        "blog": "Blog",
         "languageSwitcher": {
             "en": "Anglais",
             "fr": "Français"

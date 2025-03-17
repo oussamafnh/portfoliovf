@@ -156,9 +156,11 @@ body {
 
 
 body{
-    font-family: "ibrand", sans-serif;
+  font-family: "ibrand", sans-serif;
 }
-
+.ql-container {
+  font-family: "inter", sans-serif;
+}
 
 .oussamafannah_hero{
   font-family: "MoonWalk", sans-serif;

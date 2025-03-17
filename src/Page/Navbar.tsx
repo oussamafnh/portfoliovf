@@ -5,31 +5,35 @@ import { Menu } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LightLogo } from "@/assets/logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
+
+  const navItems = [
+    { id: "about", label: "navbar.about", path: "/" },
+    { id: "portfolio", label: "navbar.portfolio", path: "/" },
+    { id: "contact", label: "navbar.contact", path: "/" },
+    { id: "blog", label: "navbar.blog", path: "/blog" },
+  ];
+
   const handleScrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (window.location.pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
-  const navItems = [
-    { id: "home", label: "navbar.home" },
-    { id: "about", label: "navbar.about" },
-    { id: "portfolio", label: "navbar.portfolio" },
-    { id: "contact", label: "navbar.contact" },
-  ];
-
   return (
     <div className="h-[100vh] w-[100vw] absolute">
-
       <motion.nav
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute bottom-[3vh] w-[80vw] ml-[10vw] bg-white/100 border border-gray-300 z-50 h-16 flex items-center rounded-[20px]"    >
+        className="absolute bottom-[3vh] w-[80vw] ml-[10vw] bg-white/100 border border-gray-300 z-50 h-16 flex items-center rounded-[20px]"
+      >
         <div className="w-full px-4 md:px-6 flex justify-between items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -37,7 +41,9 @@ const Navbar = () => {
             transition={{ delay: 0.5 }}
             className="flex items-center"
           >
-            <LightLogo />
+            <Link to="/">
+              <LightLogo />
+            </Link>
           </motion.div>
           <div className="md:hidden mr-4">
             <Sheet>
@@ -63,11 +69,10 @@ const Navbar = () => {
                         whileTap={{ scale: 0.95 }}
                         className="w-full"
                       >
-                        <button
-                          onClick={() => {
-                            handleScrollToSection(item.id);
-                          }}
-                          className="text-xl relative px-6 py-4 group focus:outline-none border-none bg-transparent"
+                        <Link
+                          to={item.path}
+                          onClick={() => item.path === "/" && handleScrollToSection(item.id)} // Only scroll if on "/"
+                          className="text-xl relative px-6 py-4 group focus:outline-none border-none bg-transparent block"
                         >
                           <motion.span
                             className="relative z-10"
@@ -77,8 +82,8 @@ const Navbar = () => {
                               textShadow: "0 0 15px rgba(163, 230, 53, 0.4)",
                               transition: {
                                 color: { duration: 0.2 },
-                                textShadow: { duration: 0.3 }
-                              }
+                                textShadow: { duration: 0.3 },
+                              },
                             }}
                             whileTap={{ color: "#84cc16" }}
                           >
@@ -88,7 +93,7 @@ const Navbar = () => {
                               initial={{ scaleX: 0 }}
                               whileHover={{
                                 scaleX: 1,
-                                transition: { type: "spring", stiffness: 300 }
+                                transition: { type: "spring", stiffness: 300 },
                               }}
                             />
                           </motion.span>
@@ -99,10 +104,10 @@ const Navbar = () => {
                             whileHover={{
                               opacity: 0.8,
                               scale: 1,
-                              transition: { duration: 0.3 }
+                              transition: { duration: 0.3 },
                             }}
                           />
-                        </button>
+                        </Link>
                       </motion.div>
                     ))}
                   </div>
@@ -117,7 +122,6 @@ const Navbar = () => {
             </Sheet>
           </div>
 
-
           <div className="hidden md:flex items-center gap-4 mr-4">
             <ul className="flex items-center gap-4">
               {navItems.map((item) => (
@@ -127,24 +131,23 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     className="relative"
                   >
-                    <button
-                      onClick={() => {
-                        handleScrollToSection(item.id);
-                      }}
-                      className="text-xl relative px-6 py-4 group focus:outline-none border-none bg-transparent"
+                    <Link
+                      to={item.path}
+                      onClick={() => item.path === "/" && handleScrollToSection(item.id)}
+                      className="text-xl relative px-6 py-4 group focus:outline-none border-none bg-transparent block"
                     >
                       <motion.span
                         className="relative z-10"
                         initial={{ color: "#000000" }}
                         whileHover={{
-                          color: "#a3e635", 
+                          color: "#a3e635",
                           textShadow: "0 0 15px rgba(163, 230, 53, 0.4)",
                           transition: {
                             color: { duration: 0.2 },
-                            textShadow: { duration: 0.3 }
-                          }
+                            textShadow: { duration: 0.3 },
+                          },
                         }}
-                        whileTap={{ color: "#84cc16" }} 
+                        whileTap={{ color: "#84cc16" }}
                       >
                         {t(item.label)}
                         <motion.div
@@ -152,7 +155,7 @@ const Navbar = () => {
                           initial={{ scaleX: 0 }}
                           whileHover={{
                             scaleX: 1,
-                            transition: { type: "spring", stiffness: 300 }
+                            transition: { type: "spring", stiffness: 300 },
                           }}
                         />
                       </motion.span>
@@ -163,10 +166,10 @@ const Navbar = () => {
                         whileHover={{
                           opacity: 0.8,
                           scale: 1,
-                          transition: { duration: 0.3 }
+                          transition: { duration: 0.3 },
                         }}
                       />
-                    </button>
+                    </Link>
                   </motion.div>
                 </li>
               ))}
@@ -178,7 +181,6 @@ const Navbar = () => {
         </div>
       </motion.nav>
     </div>
-
   );
 };
 
