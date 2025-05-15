@@ -59,6 +59,7 @@ function App() {
         />
 
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>
